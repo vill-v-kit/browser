@@ -41,14 +41,14 @@ export const blobToJsonLegacy = <T extends Record<string, any> = Record<string, 
  * blob转json
  * 用于axios选择转换为blob时，对后台正常json报错进行读取
  *
- * 使用 `blob.text()` 进行转换
+ * 使用 `Response.prototype.json` 进行转换
  * @param blob
  */
 export const blobToJsonModern = async <T extends Record<string, any> = Record<string, any>>(
   blob: Blob
 ): Promise<T> => {
-  const result = await blob.text()
-  return JSON.parse(result)
+  const json = await new Response(blob).json()
+  return json
 }
 
 /**
@@ -64,7 +64,7 @@ export function blobToJson<T extends Record<string, any> = Record<string, any>>(
   blob: Blob,
   format = 'utf-8'
 ): Promise<T | null> {
-  if (Reflect.has(Blob.prototype, 'text')) {
+  if (Reflect.has(Response.prototype, 'json')) {
     return blobToJsonModern<T>(blob)
   }
   return blobToJsonLegacy<T>(blob, format)
