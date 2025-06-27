@@ -3,10 +3,10 @@ neta了崩坏3 往世乐土的英杰维尔薇
 
 <!-- automd:badges color="orange" license licenseBranch  bundlephobia packagephobia -->
 
-[![npm version](https://img.shields.io/npm/v/@vill-v/broswer?color=orange)](https://npmjs.com/package/@vill-v/broswer)
-[![npm downloads](https://img.shields.io/npm/dm/@vill-v/broswer?color=orange)](https://npm.chart.dev/@vill-v/broswer)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/@vill-v/broswer?color=orange)](https://bundlephobia.com/package/@vill-v/broswer)
-[![install size](https://badgen.net/packagephobia/install/@vill-v/broswer?color=orange)](https://packagephobia.com/result?p=@vill-v/broswer)
+[![npm version](https://img.shields.io/npm/v/@vill-v/browser?color=orange)](https://npmjs.com/package/@vill-v/browser)
+[![npm downloads](https://img.shields.io/npm/dm/@vill-v/browser?color=orange)](https://npm.chart.dev/@vill-v/browser)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@vill-v/browser?color=orange)](https://bundlephobia.com/package/@vill-v/browser)
+[![install size](https://badgen.net/packagephobia/install/@vill-v/browser?color=orange)](https://packagephobia.com/result?p=@vill-v/browser)
 [![license](https://img.shields.io/github/license/vill-v-kit/browser?color=orange)](https://github.com/vill-v-kit/browser/blob/true/LICENSE)
 
 <!-- /automd -->
@@ -18,22 +18,22 @@ neta了崩坏3 往世乐土的英杰维尔薇
 
 ```sh
 # ✨ Auto-detect
-npx nypm install @vill-v/broswer
+npx nypm install @vill-v/browser
 
 # npm
-npm install @vill-v/broswer
+npm install @vill-v/browser
 
 # yarn
-yarn add @vill-v/broswer
+yarn add @vill-v/browser
 
 # pnpm
-pnpm install @vill-v/broswer
+pnpm install @vill-v/browser
 
 # bun
-bun install @vill-v/broswer
+bun install @vill-v/browser
 
 # deno
-deno install @vill-v/broswer
+deno install @vill-v/browser
 ```
 
 <!-- /automd -->
