@@ -6,7 +6,8 @@ neta了崩坏3 往世乐土的英杰维尔薇
 [![npm version](https://img.shields.io/npm/v/@vill-v/broswer?color=orange)](https://npmjs.com/package/@vill-v/broswer)
 [![npm downloads](https://img.shields.io/npm/dm/@vill-v/broswer?color=orange)](https://npm.chart.dev/@vill-v/broswer)
 [![bundle size](https://img.shields.io/bundlephobia/minzip/@vill-v/broswer?color=orange)](https://bundlephobia.com/package/@vill-v/broswer)
-[![license](https://img.shields.io/github/license/vill-v-kit/vill-v?color=orange)](https://github.com/vill-v-kit/vill-v/blob/true/LICENSE)
+[![install size](https://badgen.net/packagephobia/install/@vill-v/broswer?color=orange)](https://packagephobia.com/result?p=@vill-v/broswer)
+[![license](https://img.shields.io/github/license/vill-v-kit/browser?color=orange)](https://github.com/vill-v-kit/browser/blob/true/LICENSE)
 
 <!-- /automd -->
 
@@ -45,11 +46,11 @@ _只是个人项目，整体较为随便，作为开发途中的经验总结，�
 
 <!-- automd:contributors author="Colourlessglow" license="MIT" -->
 
-Published under the [MIT](https://github.com/vill-v-kit/vill-v/blob/main/LICENSE) license.
-Made by [@Colourlessglow](https://github.com/Colourlessglow) and [community](https://github.com/vill-v-kit/vill-v/graphs/contributors) 💛
+Published under the [MIT](https://github.com/vill-v-kit/browser/blob/main/LICENSE) license.
+Made by [@Colourlessglow](https://github.com/Colourlessglow) and [community](https://github.com/vill-v-kit/browser/graphs/contributors) 💛
 <br><br>
-<a href="https://github.com/vill-v-kit/vill-v/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=vill-v-kit/vill-v" />
+<a href="https://github.com/vill-v-kit/browser/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=vill-v-kit/browser" />
 </a>
 
 <!-- /automd -->

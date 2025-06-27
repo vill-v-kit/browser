@@ -2,38 +2,51 @@
   "name": "@vill-v/broswer",
   "version": "1.3.3",
   "description": "开发中围绕浏览器的技术总结",
+  "packageManager": "pnpm@10.12.4",
   "files": [
     "dist"
   ],
   "license": "MIT",
+  "type": "module",
   "author": {
     "name": "whitekite",
     "email": "1075790909@qq.com"
   },
   "sideEffects": false,
   "homepage": "https://vill-v-kit.github.io/vill-v/",
-  "repository": "https://github.com/vill-v-kit/vill-v.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vill-v-kit/browser.git"
+  },
   "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    }
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "pnpm dlx automd && tsup-node"
+    "build": "pnpm dlx automd && tsdown",
+    "release": "vbumpp -r && pnpm build"
   },
   "dependencies": {
-    "@vill-v/ts": "workspace:*",
-    "@vill-v/type-as": "workspace:*",
-    "@vill-v/vanilla": "workspace:*",
-    "@void-cache/storage-like": "0.1.3",
-    "csstype": "^3.1.3"
+    "@vill-v/ts": "catalog:prod",
+    "@vill-v/type-as": "catalog:prod",
+    "@vill-v/vanilla": "catalog:prod",
+    "@void-cache/storage-like": "catalog:prod"
   },
   "devDependencies": {
-    "@void-cache/core": "0.1.3"
+    "@oxc-project/runtime": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "@vill-v/bumpp-github": "catalog:dev",
+    "@vill-v/eslint-config": "catalog:dev",
+    "@vill-v/prettier-config": "catalog:dev",
+    "@vill-v/tsconfig": "catalog:dev",
+    "eslint": "catalog:dev",
+    "prettier": "catalog:dev",
+    "publint": "catalog:dev",
+    "tsdown": "catalog:dev",
+    "typescript": "catalog:dev",
+    "unplugin-unused": "catalog:dev"
   }
 }

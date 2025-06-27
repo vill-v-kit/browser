@@ -1,0 +1,6 @@
+{
+  "extends": "@vill-v/tsconfig/base.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  }
+}
