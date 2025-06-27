@@ -5,7 +5,7 @@ import { StorageCache, StorageCacheStoreParseType, fallbackStorage } from './sto
  */
 export class SessionStorageCache<T = any> extends StorageCache<T> {
   constructor(key: string, parse?: StorageCacheStoreParseType<T> | true) {
-    super(window?.sessionStorage || fallbackStorage, key, parse)
+    super(globalThis?.sessionStorage || fallbackStorage, key, parse)
   }
 }
 

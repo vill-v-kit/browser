@@ -62,11 +62,11 @@ export function downloadByData({
   const blob = new Blob(blobData, { type: mime || 'application/octet-stream' })
 
   // @ts-ignore
-  if (window.navigator.msSaveBlob !== undefined) {
+  if (globalThis.navigator.msSaveBlob !== undefined) {
     // @ts-ignore
-    window.navigator.msSaveBlob(blob, filename)
+    globalThis.navigator.msSaveBlob(blob, filename)
   } else {
-    const blobURL = window.URL.createObjectURL(blob)
+    const blobURL = URL.createObjectURL(blob)
     const tempLink = document.createElement('a')
     tempLink.style.display = 'none'
     tempLink.href = blobURL
@@ -77,7 +77,7 @@ export function downloadByData({
     document.body.appendChild(tempLink)
     tempLink.click()
     document.body.removeChild(tempLink)
-    window.URL.revokeObjectURL(blobURL)
+    URL.revokeObjectURL(blobURL)
   }
 }
 
@@ -127,10 +127,10 @@ export function downloadByUrl({
   target?: LinkTargetContext
   fileName?: string
 }): boolean {
-  const isChrome = window.navigator.userAgent.toLowerCase().indexOf('chrome') > -1
-  const isSafari = window.navigator.userAgent.toLowerCase().indexOf('safari') > -1
+  const isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1
+  const isSafari = navigator.userAgent.toLowerCase().indexOf('safari') > -1
 
-  if (/(iP)/g.test(window.navigator.userAgent)) {
+  if (/(iP)/g.test(navigator.userAgent)) {
     console.error('Your browser does not support download!')
     return false
   }
