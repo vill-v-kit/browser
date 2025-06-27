@@ -60,25 +60,18 @@ export function downloadByData({
 }) {
   const blobData = bom !== undefined ? [bom, data] : [data]
   const blob = new Blob(blobData, { type: mime || 'application/octet-stream' })
-
-  // @ts-ignore
-  if (globalThis.navigator.msSaveBlob !== undefined) {
-    // @ts-ignore
-    globalThis.navigator.msSaveBlob(blob, filename)
-  } else {
-    const blobURL = URL.createObjectURL(blob)
-    const tempLink = document.createElement('a')
-    tempLink.style.display = 'none'
-    tempLink.href = blobURL
-    tempLink.setAttribute('download', filename)
-    if (tempLink.download === undefined) {
-      tempLink.setAttribute('target', target)
-    }
-    document.body.appendChild(tempLink)
-    tempLink.click()
-    document.body.removeChild(tempLink)
-    URL.revokeObjectURL(blobURL)
+  const blobURL = URL.createObjectURL(blob)
+  const tempLink = document.createElement('a')
+  tempLink.style.display = 'none'
+  tempLink.href = blobURL
+  tempLink.setAttribute('download', filename)
+  if (tempLink.download === undefined) {
+    tempLink.setAttribute('target', target)
   }
+  document.body.appendChild(tempLink)
+  tempLink.click()
+  document.body.removeChild(tempLink)
+  URL.revokeObjectURL(blobURL)
 }
 
 /**
