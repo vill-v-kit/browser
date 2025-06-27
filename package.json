@@ -42,6 +42,7 @@
     "@vill-v/eslint-config": "catalog:dev",
     "@vill-v/prettier-config": "catalog:dev",
     "@vill-v/tsconfig": "catalog:dev",
+    "@void-cache/core": "catalog:dev",
     "eslint": "catalog:dev",
     "prettier": "catalog:dev",
     "publint": "catalog:dev",
